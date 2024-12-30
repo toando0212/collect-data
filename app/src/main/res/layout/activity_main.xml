@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Wi-Fi Networks List -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Position Inputs -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp">
+
+        <EditText
+            android:id="@+id/editTextX"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter X"
+            android:inputType="numberDecimal|numberSigned"
+            android:padding="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Y"
+            android:inputType="numberDecimal|numberSigned"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/buttonRescan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rescan Wi-Fi" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Wi-Fi Data" />
+
+    <!-- Open CSV Button -->
+    <Button
+        android:id="@+id/buttonOpenCSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open CSV File" />
+
+    <Button
+        android:id="@+id/buttonClearCSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear CSV File" />
+</LinearLayout>
