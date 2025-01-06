@@ -3,26 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:background="@drawable/wifi_item_background"
+    android:padding="12dp"
+    android:elevation="4dp"
+    android:layout_marginBottom="8dp">
 
+    <!-- SSID -->
     <TextView
         android:id="@+id/ssidTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SSID"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:paddingBottom="4dp" />
 
+    <!-- MAC Address -->
     <TextView
         android:id="@+id/macAddressTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="MAC Address"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:paddingBottom="4dp" />
 
+    <!-- Signal Strength -->
     <TextView
         android:id="@+id/signalStrengthTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Signal Strength"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textColor="#757575" />
 </LinearLayout>

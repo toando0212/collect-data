@@ -3,14 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F5F5F5"
     android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wi-Fi Data Collector"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#333333"
+        android:paddingBottom="12dp" />
 
     <!-- Wi-Fi Networks List -->
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:elevation="2dp" />
 
     <!-- Position Inputs -->
     <LinearLayout
@@ -26,7 +44,9 @@
             android:layout_weight="1"
             android:hint="Enter X"
             android:inputType="numberDecimal|numberSigned"
-            android:padding="8dp"/>
+            android:padding="8dp"
+            android:backgroundTint="#757575"
+            android:textColorHint="#757575" />
 
         <EditText
             android:id="@+id/editTextY"
@@ -35,32 +55,61 @@
             android:layout_weight="1"
             android:hint="Enter Y"
             android:inputType="numberDecimal|numberSigned"
-            android:padding="8dp"/>
+            android:padding="8dp"
+            android:backgroundTint="#757575"
+            android:textColorHint="#757575" />
     </LinearLayout>
 
-    <!-- Save Button -->
-    <Button
-        android:id="@+id/buttonRescan"
+    <!-- Buttons Section -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rescan Wi-Fi" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp">
 
-    <Button
-        android:id="@+id/buttonSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save Wi-Fi Data" />
+        <Button
+            android:id="@+id/buttonRescan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#BDBDBD"
+            android:text="Rescan Wi-Fi"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp" />
 
-    <!-- Open CSV Button -->
-    <Button
-        android:id="@+id/buttonOpenCSV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Open CSV File" />
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#BDBDBD"
+            android:text="Save Wi-Fi Data"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp" />
 
-    <Button
-        android:id="@+id/buttonClearCSV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Clear CSV File" />
+        <Button
+            android:id="@+id/buttonOpenCSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#BDBDBD"
+            android:text="Open CSV File"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/buttonClearCSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#BDBDBD"
+            android:text="Clear CSV File"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp" />
+    </LinearLayout>
+
 </LinearLayout>
